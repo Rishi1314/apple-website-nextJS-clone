@@ -1,91 +1,179 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "./page.module.css";
+import { motion } from "framer-motion";
+import iphoneherophoto from "../public/iphoneherophoto.jpeg";
+import iphoneherophoto2 from "../public/iphoneherophoto2.jpeg";
+import flowergirl from "../public/flowergirl.jpeg"
+import iphonechip from "../public/iphonechip.jpeg"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      <div className={styles.navbar}>
+        <div>iPhone 14 pro</div>
+        <div className={styles.navlinks}>
+          <span>Overview</span>
+          <span>Switch from Android to iPhone</span>
+          <span>Specs</span>
+          <span
+            style={{
+              backgroundColor: "#0071E3",
+              width: "50px",
+              height: "20px",
+              textAlign: "center",
+              borderRadius: "20px",
+            }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            Buy
+          </span>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+      <div className={styles.weed}></div>
+      <div className={styles.proBeyond}>
+        <div>Pro.Beyond.</div>
+        <div></div>
       </div>
+      <div className={styles.miniScreen}>
+      <motion.video 
+        transition={{
+          duration: 1,
+          delay: 3,
+        }}
+        initial={{
+          opacity: 1
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        }}
+        animate={{
+          opacity: 0
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        }}
+        autoPlay loop muted>
+          <source src="/smallerScreenIphone.mp4" type="video/mp4" />
+        </motion.video>
+      </div>
+      <div className={styles.heroScreen}>
+        <motion.div
+          transition={{
+            duration: 1,
+            delay: 4,
+          }}
+          initial={{
+            opacity: 0,
+            y: 100,
+            x: 350,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            x: 350,
+          }}
         >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+          <Image
+            src={iphoneherophoto}
+            alt="Picture of the author"
+            className={styles.photo}
+          />
+        </motion.div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <motion.video 
+        transition={{
+          duration: 1,
+          delay: 3,
+        }}
+        initial={{
+          opacity: 1
+
+        }}
+        animate={{
+          opacity: 0
+
+        }}
+        autoPlay muted className={styles.video}>
+          <source src="/iphoneherovideo.mp4" type="video/mp4" />
+        </motion.video>
+      </div>
+      <div className={styles.secondScreen}>
+        <div className={styles.boxOne}>
+          <span className={styles.spanOne}> iPhone 14 Pro and iPhone 14 Pro Max</span>
+          <span className={styles.spanTwo}>From $999 or $41.62/mo. for 24 mo. before trade‑in*</span>
+          <span className={styles.spanThree}>Buy</span>
+        </div>
+        <div className={styles.boxTwo}>
+            <div className={styles.colOne}>
+              <div className={styles.card}>
+                <div>
+                  <span style={{color:"#E28AFF"}}>Meet</span>
+                  <span style={{color:"#C45EFF"}}>Dynamic Island</span>
+                </div>
+                <motion.div
+                transition={{
+                  duration: 1,
+                  // delay: 4,
+                }}
+                initial={{
+                  y:100,
+                  opacity:0.5
+                }}
+                whileInView={{
+                 y:0,
+                 opacity:1
+                }} viewport={{ once: true }}>
+                                  <Image src={iphoneherophoto2}/>
+
+                </motion.div>
+              </div>
+            </div>
+            <div className={styles.colTwo}>
+            <div className={styles.cardOne}>
+              <motion.div
+                transition={{
+                  duration: 1,
+                  // delay: 4,
+                }}
+                initial={{
+                  y:100,
+                  opacity:0.5
+                }}
+                whileInView={{
+                 y:0,
+                 opacity:1
+                }} viewport={{ once: true }}>
+              <Image src={flowergirl} className={styles.flowerGirl}/>
+
+              </motion.div>
+              <div className={styles.cameraDeets}>
+                <span>48MP Main camera.</span>
+                <span> Mind-blowing detail.</span>
+
+              </div>
+            </div>
+            <div className={styles.cardOne}>
+              <motion.div transition={{
+            duration: 1,
+            // delay: 4,
+          }}
+          initial={{
+            x:20,
+            zIndex:2
+          }}
+          whileInView={{
+           y:180
+          }} viewport={{ once: true }}>
+                <Image src={iphonechip} className={styles.iphoneChip}/>
+              </motion.div>
+              <div className={styles.chipDeets}>
+                <span style={{color:"#F5A6FF"}}>The</span>
+                <span style={{color:"#D679FF"}}>mastermind</span>
+                <span style={{color:"#BF56FF"}}>behind it all.</span>
+              </div>
+            </div>
+            </div>
+        </div>
       </div>
     </main>
-  )
+  );
 }
