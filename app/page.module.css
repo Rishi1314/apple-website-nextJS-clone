@@ -117,9 +117,13 @@
 }
 
 .secondScreen{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: #161617;
   width: 100%;
-  height: 200vh;
+  minheight: 300vh;
+  
   font-family: 'Roboto', sans-serif;
 }
 .boxOne{
@@ -223,6 +227,59 @@
 .miniScreen{
   display: none;
 }
+
+.boxThree{
+  display: flex;
+  
+  width: 100%;
+  justify-content: center;
+}
+.boxThree .colOne{
+  margin: 0 20px;
+  
+
+}
+.boxThree .colOne .cardOne{
+  display: flex;
+  height: 600px;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  color: white;
+  overflow: hidden;
+}
+.boxThree .colTwo .card{
+  width: 632px;
+  border-radius: 20px;
+  height: 600px;
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.alwaysOnDeets{
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.alwaysOnDisplay{
+  width: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  display: block;
+}
+
 @media screen and (max-width:900px){
   .heroScreen{
     display: none;
@@ -230,6 +287,7 @@
   .navlinks{
     display: none;
   }
+  
   .boxTwo{
     display: flex;
     flex-direction: column;
@@ -267,14 +325,42 @@
   }
   .miniScreen{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    position: relative;
+    align-items: center;
     background-color: #000000;
     height: 50vh;
   }
   .miniScreen video{
     width: 50%;
   }
+  .miniIphone{
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    left: 25vw;
+    position: absolute;
+  }
+  .miniIphoneImage{
+    width: 49%;
+    height: 49%;
+  }
   .proBeyond{
     font-size: 200%;
+  }
+  .boxThree{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .boxThree .colTwo{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .boxThree .colTwo .card{
+    width: 90%;
   }
 }
