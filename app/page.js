@@ -9,6 +9,9 @@ import flowergirl from "../public/flowergirl.jpeg"
 import iphonechip from "../public/iphonechip.jpeg"
 import bg from "../public/basketballGirl.jpg";
 import alwaysOnDisplay from "../public/alwaysOnDisplay.jpeg"
+import tiltedPhone from "../public/tiltedphone.jpeg"
+import waterResistance from "../public/waterResistance.jpeg"
+import cameraGuy from "../public/cameraGuy.jpeg"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -192,6 +195,22 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className={styles.boxFour}>
+          <div className={styles.colOne}>
+            <div className={styles.card}>
+                <span>a battery that's</span>
+                <div>
+                  <span>all in,</span>
+                  <span style={{margin:20}}>all day.</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.colTwo}>
+            <div className={styles.card}>
+
+            </div>
+          </div>
+        </div>
         <div className={styles.boxThree}>
           <div className={styles.colOne}>
             <div className={styles.cardOne} style={{ backgroundImage: `url(${bg.src})` }}>
@@ -232,6 +251,53 @@ export default function Home() {
             </div>
 
           </div>
+        </div>
+        <div className={ styles.boxFive}>
+                <div  className={styles.colOne}>
+                  <div className={styles.card}>
+                    <div className={styles.text}>
+                        <span>Cermaic Shield</span>
+                        <span style={{fontSize:"200%"}}>Tougher than any</span>
+                        <span style={{fontSize:"200%"}}> smartphone glass.</span>
+                    </div>
+                    <motion.div 
+                    transition={{
+                duration: 1,
+                // delay: 4,
+              }}
+                initial={{
+                  y:200,
+                  zIndex: 2
+                }}
+                whileInView={{
+                  y: 50
+                }} viewport={{ once: true }}
+              className={styles.tiltedPhone} style={{ backgroundImage: `url(${tiltedPhone.src})` }}></motion.div>
+                  </div>
+                </div>
+                <div className={styles.colTwo}>
+                  <div className={styles.cardOne}>
+                    <motion.div 
+                    style={{ backgroundImage: `url(${waterResistance.src})` }} className={styles.waterResistance}></motion.div>
+                  </div>
+                  <div className={styles.cardTwo}>
+                    <div>A camera in a class by itselfie.</div>
+                  <motion.div 
+                  transition={{
+                    duration: 1,
+                    // delay: 4,
+                  }}
+                    initial={{
+                      x:200,
+                      y:15,
+                      zIndex: 2
+                    }}
+                    whileInView={{
+                      x: 50
+                    }} viewport={{ once: true }}
+                    style={{ backgroundImage: `url(${cameraGuy.src})` }} className={styles.cameraGuy}></motion.div>
+                  </div>
+                </div>
         </div>
       </div>
     </main>
